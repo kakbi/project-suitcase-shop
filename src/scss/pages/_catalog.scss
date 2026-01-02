@@ -1,0 +1,443 @@
+@use '../abstracts/variables' as *;
+
+// start cotalog-products section
+
+.cotalog-products {
+    font-family: $font-primary;
+    padding: 40px 0;
+
+    &__container {
+        max-width: 1340px;
+        margin: 0 auto;
+    }
+
+    &__results {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__results-text {
+        font-size: 16px;
+        color: $color-grey;
+    }
+
+    &__controls-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    &__filters {
+        margin: 35px 0;
+        display: flex;
+        padding: 35px 20px;
+        background: $color-white;
+        position: relative;
+        justify-content: space-between;
+        border-top: 3px solid rgb(185 39 112 / 100%);
+        border-bottom: 3px solid rgb(185 39 112 / 100%);
+
+        &.hidden {
+            display: none;
+        }
+
+        label {
+            font-size: $font-size-medium;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    &__filters-size {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__filters-color {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__filters-category {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__filter {
+        position: relative;
+        width: 270px;
+        gap: 25px;
+
+        &-btn {
+            padding: 20px 40px;
+        }
+    }
+
+    &__sale-filter {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        input[type='checkbox'] {
+            cursor: pointer;
+        }
+    }
+
+    &__filter-btns {
+        padding: 0 20px;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__search {
+        position: relative;
+        margin-bottom: 35px;
+        border: 2px solid rgb(233 233 237 / 100%);
+        overflow: hidden;
+
+        input {
+            width: 100%;
+            border: none;
+            font-size: 16px;
+            padding: 10px;
+            outline: none;
+            background: url('/src/assets/img/icons/search.svg') no-repeat right
+                12px center;
+            background-size: 15px 15px;
+
+            &::placeholder {
+                color: $color-grey;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 10px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 296px);
+        justify-content: space-between;
+        row-gap: 50px;
+        padding: 15px 20px 0;
+
+        @media (width <= 1270px) {
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    &__sidebar {
+        padding: 0 20px;
+    }
+
+    &__sidebar-title {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+        margin-bottom: 23px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        &-img {
+            width: 87px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            flex-shrink: 0;
+        }
+
+        &-info {
+            font-size: $font-size-small;
+        }
+
+        &-text {
+            margin-bottom: 10px;
+        }
+
+        &-rating {
+            margin-bottom: 7px;
+
+            img {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &-price {
+            margin-top: 5px;
+        }
+    }
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgb(185 39 112);
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        width: 54px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    &__image {
+        height: 400px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 0 20px 80px 0 rgb(193 199 212 / 70%);
+        }
+    }
+
+    &__title {
+        font-size: 19px;
+        font-weight: $font-weight-bold;
+        line-height: 27px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__price {
+        font-size: 19px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    &__btn {
+        padding: 10px 25px;
+        font-size: $font-size-medium;
+        width: 156px;
+        margin: 0 auto;
+    }
+}
+
+@media (width <= 1024px) {
+    .cotalog-products {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+
+        &__results {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        &__sidebar {
+            order: 1;
+            margin-top: 30px;
+            padding: 0 20px;
+
+            &-title {
+                text-align: center;
+                font-size: 20px;
+                order: 1;
+            }
+        }
+
+        &__grid {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 296px);
+            gap: 30px;
+            padding: 20px;
+        }
+
+        &__controls {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        &__filters {
+            gap: 12px;
+        }
+
+        .product-card {
+            width: 296px;
+            height: 569px;
+
+            &__image {
+                width: 296px;
+                height: 400px;
+                overflow: hidden;
+
+                img {
+                    width: 296px;
+                    height: 400px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 768px) {
+    .cotalog-products {
+        &__container {
+            max-width: 720px;
+            padding-top: 0;
+        }
+
+        &__controls {
+            padding: 10px 20px;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+
+            &-wrapper {
+                order: 2;
+            }
+        }
+
+        &__results {
+            justify-content: flex-start;
+        }
+
+        select {
+            width: 200px;
+            padding: 8px 35px 8px 10px;
+            background-position: right 10px center;
+            background-size: 8px;
+            font-size: 14px;
+
+            option {
+                font-size: 14px;
+            }
+        }
+
+        &__filters {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 20px;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        &__filter-btns {
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+        }
+
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            justify-content: flex-start;
+            width: 296px;
+            height: 569px;
+
+            &__image {
+                width: 296px;
+                height: 400px;
+
+                img {
+                    width: 296px;
+                    height: 400px;
+                    object-fit: cover;
+                }
+            }
+
+            &__title {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            &__price {
+                font-size: 16px;
+            }
+
+            &__btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+
+        &__sidebar {
+            order: 1;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &__search {
+            margin: 0;
+        }
+
+        &__list {
+            margin-bottom: 15px;
+        }
+
+        &__sale-filter {
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+}
+
+// end cotalog-products section
+
+// start pagination
+.pagination {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+// end pagination

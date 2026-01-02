@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../dist/main.css" />
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section class="cart-intro__section">
+                <img
+                    src="../assets/img/cart-intro-background.jpg"
+                    alt="a road"
+                    class="cart-intro-img"
+                />
+                <div class="cart-intro__overlay">
+                    <div class="cart-intro__content">
+                        <h1 class="cart-intro__title">My Cart</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="cart">
+                <div class="cart__container container">
+                    <div class="cart__header">
+                        <span class="cart__header-item"> IMAGE </span>
+                        <span class="cart__header-item"> PRODUCT NAME </span>
+                        <span class="cart__header-item"> PRICE </span>
+
+                        <span class="cart__header-item"> QUANTITY </span>
+                        <span class="cart__header-item"> TOTAL </span>
+                        <span class="cart__header-item"> DELETE </span>
+                    </div>
+
+                    <div class="cart__items">
+                        <div class="cart__item">
+                            <img
+                                src="../assets/img/image6.jpg"
+                                alt="luggage"
+                                class="cart__item-image"
+                            />
+                            <h3 class="cart__item-name">Nomad Haven</h3>
+                            <p class="cart__item-price">$250</p>
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-decrease">
+                                    -
+                                </button>
+                                <span class="cart__quantity-value" id="quantity"
+                                    >1</span
+                                >
+                                <button class="cart__quantity-increase">
+                                    +
+                                </button>
+                            </div>
+                            <p class="cart__item-total">$250</p>
+                            <button class="cart__item-delete">
+                                <span>
+                                    <img
+                                        src="../assets/img/icons/bin.svg"
+                                        alt="bin"
+                                    />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart__actions">
+                        <div class="cart__actions-btns">
+                            <a
+                                href="./catalog.html"
+                                class="button cart__actions-btn"
+                            >
+                                CONTINUE SHOPPING
+                            </a>
+                            <button class="button cart__actions-btn">
+                                CLEAR SHOPPING CART
+                            </button>
+                        </div>
+
+                        <div class="cart__summary">
+                            <div class="cart__summary-item">
+                                <span class="cart__summary-label"
+                                    >Sub Total</span
+                                >
+                                <span class="cart__summary-price">$0</span>
+                            </div>
+                            <div
+                                class="cart__summary-item cart__summary-discount"
+                            >
+                                <span class="cart__summary-label"
+                                    >Discount</span
+                                >
+                                <span class="cart__summary-price discount-price"
+                                    >$0</span
+                                >
+                            </div>
+                            <div class="cart__summary-item">
+                                <span class="cart__summary-label"
+                                    >Shipping</span
+                                >
+                                <span class="cart__summary-price shipping-price"
+                                    >$0</span
+                                >
+                            </div>
+                            <div class="cart__summary-item cart__summary-total">
+                                <span class="cart__summary-label">Total</span>
+                                <span class="cart__summary-price">$0</span>
+                            </div>
+                            <button class="button checkout-btn">
+                                CHECKOUT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="../js/main.js" type="module"></script>
+</html>

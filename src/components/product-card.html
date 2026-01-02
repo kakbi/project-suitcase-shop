@@ -1,0 +1,348 @@
+<div class="container">
+    <div class="product-details__wrapper">
+        <div class="product-details__container">
+            <div class="product-details__gallery">
+                <div class="product-details__main-image"></div>
+
+                <div class="product-details__thumbnails">
+                    <img
+                        src="/src/assets/img/product-details-miniature-1.jpg"
+                        alt="Front view"
+                        class="product-details__thumbnail"
+                    />
+                    <img
+                        src="/src/assets/img/product-details-miniature-2.jpg"
+                        alt="Back view"
+                        class="product-details__thumbnail"
+                    />
+                    <img
+                        src="/src/assets/img/product-details-miniature-3.jpg"
+                        alt="Open view"
+                        class="product-details__thumbnail"
+                    />
+                    <img
+                        src="/src/assets/img/product-details-miniature-4.jpg"
+                        alt="Inside view"
+                        class="product-details__thumbnail"
+                    />
+                </div>
+            </div>
+
+            <div class="product-details__info">
+                <h1 class="product-details__title" id="product-title">
+                    <span class="sr-only">Loading product name...</span>
+                </h1>
+                <div class="product-details__item-rating" id="product-rating">
+                    <span
+                        class="product-details__item-rating"
+                        aria-hidden="true"
+                    ></span>
+                </div>
+                <p class="product-details__price" id="product-price">
+                    <span class="sr-only">Price will be loaded</span>
+                </p>
+                <p class="product-details__description">
+                    The new Global Explorer Max Comfort Suitcase Pro is a bold
+                    reimagining of travel essentials, designed to elevate every
+                    journey. Made with at least 30% recycled materials, its
+                    lightweight yet impact-resistant shell combines eco-
+                    conscious innovation with rugged durability.
+                </p>
+                <p class="product-details__description">
+                    The ergonomic handle and GlideMotion spinner wheels ensure
+                    effortless mobility while making a statement in sleek
+                    design. Inside, the modular compartments and adjustable
+                    straps keep your belongings secure and neatly organized, no
+                    matter the destination.
+                </p>
+
+                <div class="product-details__options">
+                    <label for="filter-size" class="product-details__label"
+                        >Size</label
+                    >
+
+                    <select class="product-details__select" id="filter-size">
+                        <option value="">Choose option</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="S-L">S-L</option>
+                        <option value="S, M, XL">S, M, XL</option>
+                    </select>
+
+                    <label for="filter-color" class="product-details__label"
+                        >Color</label
+                    >
+
+                    <select class="product-details__select" id="filter-color">
+                        <option value="">Choose option</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="black">Black</option>
+                        <option value="grey">Grey</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="pink">Pink</option>
+                    </select>
+
+                    <label for="filter-category" class="product-details__label"
+                        >Category</label
+                    >
+
+                    <select
+                        class="product-details__select"
+                        id="filter-category"
+                    >
+                        <option value="">Choose option</option>
+                        <option value="carry-ons">Carry-ons</option>
+                        <option value="suitcases">Suitcases</option>
+                        <option value="luggage sets">Luggage Sets</option>
+                        <option value="kids' luggage">Kids' Luggage</option>
+                    </select>
+                </div>
+
+                <div class="product-details__actions">
+                    <div class="product-details__quantity">
+                        <button
+                            class="product-details__quantity-decrease"
+                            aria-label="Decrease quantity"
+                        >
+                            -
+                        </button>
+                        <span
+                            class="product-details__quantity-value"
+                            id="quantity"
+                            >1</span
+                        >
+                        <button
+                            class="product-details__quantity-increase"
+                            aria-label="Increase quantity"
+                        >
+                            +
+                        </button>
+                    </div>
+
+                    <button
+                        class="button product-details__add-to-cart"
+                        id="add-to-cart"
+                    >
+                        Add To Cart
+                    </button>
+                </div>
+
+                <div class="product-details__payments">
+                    <h3 class="product-details__payments-title">Payment:</h3>
+                    <img
+                        src="/src/assets/img/icons/visa-pay-logo.svg"
+                        alt="VISA"
+                    />
+                    <img
+                        src="/src/assets/img/icons/american-express-logo.svg"
+                        alt="American Express"
+                    />
+                    <img
+                        src="/src/assets/img/icons/master-card-logo.svg"
+                        alt="Master Card"
+                    />
+                    <img
+                        src="/src/assets/img/icons/paypal-logo.svg"
+                        alt="PayPal"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-tabs">
+        <ul class="product-tabs__nav">
+            <li
+                class="product-tabs__nav-item product-tabs__nav-item--active"
+                data-tab="details"
+            >
+                DETAILS
+            </li>
+            <li class="product-tabs__nav-item" data-tab="reviews">REVIEWS</li>
+            <li class="product-tabs__nav-item" data-tab="shipping">
+                SHIPPING POLICY
+            </li>
+        </ul>
+
+        <div class="product-tabs__content">
+            <div
+                class="product-tabs__panel product-tabs__panel--active"
+                data-tab="details"
+            >
+                <p class="product-tabs__content-text">
+                    Vestibulum commodo sapien non elit porttitor, vitae volutpat
+                    nibh mollis. Nulla porta risus id neque tempor, in efficitur
+                    justo imperdiet. Etiam a ex at ante tincidunt imperdiet.
+                    Nunc congue ex vel nisl viverra, sit amet aliquet lectus
+                    ullamcorper. Praesent luctus lacus non lorem elementum, eu
+                    tristique sapien suscipit. Sed bibendum, ipsum nec viverra
+                    malesuada, erat nisi sodales purus, eget hendrerit dui
+                    ligula eu enim. Ut non est nisi. Pellentesque tristique
+                    pretium dolor eu commodo. Proin iaculis nibh vitae lectus
+                    mollis bibendum. Quisque varius eget urna sit amet luctus.
+                    Suspendisse potenti. Curabitur ac placerat est, sit amet
+                    sodales risus. Pellentesque viverra dui auctor, ullamcorper
+                    turpis pharetra, facilisis quam.
+                </p>
+                <p class="product-tabs__content-text">
+                    Proin iaculis nibh vitae lectus mollis bibendum. Quisque
+                    varius eget urna sit amet luctus. Suspendisse potenti.
+                    Curabitur ac placerat est, sit amet sodales risus.
+                    Pellentesque viverra dui auctor, ullamcorper turpis
+                    pharetra, facilisis quam. Proin iaculis nibh vitae lectus
+                    mollis bibendum.
+                </p>
+                <p class="product-tabs__content-text">
+                    Quisque varius eget urna sit amet luctus. Suspendisse
+                    potenti. Curabitur ac placerat est, sit amet sodales risus.
+                    Pellentesque viverra dui auctor, ullamcorper turpis
+                    pharetra, facilisis quam.
+                </p>
+            </div>
+
+            <div class="product-tabs__panel" data-tab="reviews">
+                <div class="product-reviews">
+                    <div class="product-reviews__list">
+                        <h3 class="product-reviews__title">
+                            1 review for Global Explorer Max Comfort Suitcase
+                            Pro
+                        </h3>
+                        <div class="product-reviews__item">
+                            <div class="product-reviews__author">
+                                <img
+                                    src="/src/assets/img/avatar-reviewer.png"
+                                    alt="Reviewer avatar"
+                                    class="product-reviews__avatar"
+                                />
+                            </div>
+
+                            <div class="product-reviews__info">
+                                <div class="product-reviews__info-header">
+                                    <div class="product-reviews__meta">
+                                        <span class="product-reviews__name"
+                                            >Ella Harper</span
+                                        >
+                                        <span class="product-reviews__date"
+                                            >/ June 11, 2025</span
+                                        >
+                                    </div>
+
+                                    <div class="product-reviews__rating">
+                                        <img
+                                            src="/src/assets/img/icons/star-yellow.svg"
+                                            alt="yellow star"
+                                        />
+                                        <img
+                                            src="/src/assets/img/icons/star-yellow.svg"
+                                            alt="yellow star"
+                                        />
+                                        <img
+                                            src="/src/assets/img/icons/star-yellow.svg"
+                                            alt="yellow star"
+                                        />
+                                        <img
+                                            src="/src/assets/img/icons/star-yellow.svg"
+                                            alt="yellow star"
+                                        />
+                                        <img
+                                            src="/src/assets/img/icons/star-grey.svg"
+                                            alt="grey star"
+                                        />
+                                    </div>
+                                </div>
+                                <p class="product-reviews__text">
+                                    Proin iaculis nibh vitae lectus mollis
+                                    bibendum. Quisque varius eget urna sit amet
+                                    luctus. Suspendisse potenti curabitur ac
+                                    placerat est, sit amet sodales risus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="product-reviews__form" id="reviewForm">
+                        <h3 class="product-reviews__form-title">Add Review</h3>
+                        <p class="product-reviews__note">
+                            Your email address won’t be shared with anybody.
+                            Required fields have the symbol
+                            <span class="product-reviews__required">*</span>
+                        </p>
+
+                        <div class="product-reviews__rate-product">
+                            <p class="product-reviews__label">RATE PRODUCT</p>
+                            <div class="product-reviews__rating-input">
+                                <img
+                                    src="/src/assets/img/icons/empty-star.svg"
+                                    alt="grey star"
+                                />
+                                <img
+                                    src="/src/assets/img/icons/empty-star.svg"
+                                    alt="grey star"
+                                />
+                                <img
+                                    src="/src/assets/img/icons/empty-star.svg"
+                                    alt="grey star"
+                                />
+                                <img
+                                    src="/src/assets/img/icons/empty-star.svg"
+                                    alt="grey star"
+                                />
+                                <img
+                                    src="/src/assets/img/icons/empty-star.svg"
+                                    alt="grey star"
+                                />
+                            </div>
+                        </div>
+
+                        <textarea
+                            class="product-reviews__textarea"
+                            id="product-reviews__textarea"
+                            placeholder="Your Review*"
+                        ></textarea>
+
+                        <div class="product-reviews__inputs">
+                            <input
+                                type="text"
+                                class="product-reviews__input"
+                                id="product-reviews__input-name"
+                                placeholder="Your Name*"
+                            />
+                            <input
+                                type="email"
+                                class="product-reviews__input"
+                                id="product-reviews__input-email"
+                                placeholder="Your Email*"
+                            />
+                        </div>
+
+                        <label class="product-reviews__checkbox">
+                            <input type="checkbox" />
+                            Save my name, email, and website in this browser for
+                            when I leave another comment.
+                        </label>
+
+                        <button
+                            type="submit"
+                            class="button product-reviews__submit"
+                        >
+                            SUBMIT
+                        </button>
+
+                        <p
+                            id="formMessage"
+                            class="product-reviews__message"
+                        ></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="product-tabs__panel" data-tab="shipping">
+                <p>Shipping policy text goes here…</p>
+            </div>
+        </div>
+    </div>
+</div>

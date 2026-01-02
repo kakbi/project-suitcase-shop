@@ -1,0 +1,53 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/mixins' as mixins;
+@use 'sass:color';
+
+.button {
+    @include mixins.button($color-button);
+}
+
+.pagination__button {
+    @include mixins.pagination-button;
+}
+
+.pagination__button-icon {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.icon-prev {
+        background-image: url('/src/assets/img/icons/arrow-next.svg');
+        transform: scaleX(-1);
+        margin-right: 10px;
+    }
+
+    &.icon-next {
+        background-image: url('/src/assets/img/icons/arrow-next.svg');
+        margin-left: 13px;
+    }
+}
+
+.pagination__page {
+    @include mixins.pagination-button(
+        $bg: $color-white,
+        $border: none,
+        $padding: 11px 17px,
+        $font-size: $font-size-small,
+        $font-weight: $font-weight-medium,
+        $hover-bg: #e576b5
+    );
+
+    &--active {
+        @include mixins.pagination-button(
+            $bg: $color-button,
+            $border: none,
+            $padding: 11px 17px,
+            $font-size: $font-size-small,
+            $font-weight: $font-weight-medium
+        );
+
+        color: $color-white;
+    }
+}

@@ -1,0 +1,341 @@
+@use '../abstracts/variables' as *;
+
+// start about section
+
+.about {
+    position: relative;
+    text-align: center;
+    color: $color-white;
+    height: calc(100vh - 220px);
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgb(0 0 0 / 40%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+    }
+
+    &__content {
+        font-family: $font-primary;
+        position: relative;
+        max-width: 700px;
+        padding: 0 20px;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: $font-size-medium;
+        line-height: 24px;
+        color: $color-white;
+    }
+}
+
+@media (width <= 1440px) {
+    .about {
+        height: calc(100vh - 227px);
+
+        &__image {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+@media (width <= 1024px) {
+    .about {
+        &__title {
+            font-size: 35px;
+            font-weight: $font-weight-bold;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (width <= 768px) {
+    .about {
+        &__content {
+            max-width: 335px;
+        }
+
+        &__title {
+            font-size: 28px;
+            font-weight: $font-weight-bold;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 24px;
+            color: $color-white;
+        }
+    }
+}
+
+// end about section
+
+// start features section
+
+.features {
+    margin: 130px 0;
+    background-color: $color-white;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        max-width: 1340px;
+        padding: 0 20px;
+        gap: 95px;
+        text-align: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-primary;
+    }
+
+    &__icon {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-size: $font-size-medium;
+        line-height: 24px;
+    }
+}
+
+@media (width <= 1024px) {
+    .features {
+        margin: 90px 0;
+
+        &__container {
+            grid-template-columns: repeat(2, minmax(190px, 1fr));
+            gap: 65px;
+        }
+    }
+}
+
+@media (width <= 768px) {
+    .features {
+        margin: 50px 0;
+
+        &__container {
+            grid-template-columns: 220px;
+            gap: 20px;
+            padding: 0 10px;
+            align-items: center;
+        }
+
+        &__icon {
+            img {
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        &__title {
+            font-size: 17px;
+        }
+
+        &__text {
+            font-size: $font-size-small;
+            line-height: 20px;
+        }
+    }
+}
+
+// end features section
+
+// start arrivals section
+
+.arrivals {
+    padding: 0 20px;
+    background-color: $color-white;
+
+    &__container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: space-between;
+        max-width: 647px;
+        font-family: $font-primary;
+    }
+
+    &__title {
+        font-size: $font-size-large;
+        font-weight: $font-weight-bolder;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: $font-size-medium;
+        line-height: 24px;
+        color: $color-grey;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        font-size: 14px;
+        text-align: center;
+        width: 200px;
+        padding: 20px 30px;
+    }
+
+    &__image {
+        flex: 0 0 630px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (width <= 1024px) {
+    .arrivals {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        &__content {
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        &__image {
+            align-items: center;
+            flex: 1 1 auto;
+        }
+    }
+}
+
+@media (width <= 768px) {
+    .arrivals {
+        &__title {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            font-size: $font-size-small;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// end arrivals section
+
+// start team section
+
+.team {
+    font-family: $font-primary;
+    text-align: center;
+    margin-top: 130px;
+    padding: 0 20px;
+
+    &__title {
+        font-size: $font-size-large;
+        margin-bottom: 60px;
+        font-weight: $font-weight-bold;
+    }
+
+    &__members {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    &__member {
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+
+    &__member-photo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 27px;
+    }
+
+    &__member-name {
+        font-size: 22px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 27px;
+    }
+
+    &__member-role {
+        font-size: $font-size-medium;
+    }
+}
+
+@media (width <= 1024px) {
+    .team {
+        margin-top: 90px;
+    }
+}
+
+@media (width <= 768px) {
+    .team {
+        margin-top: 60px;
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__members {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        &__member-photo {
+            max-width: 410px;
+            margin-bottom: 17px;
+        }
+
+        &__member-name {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+// end team section

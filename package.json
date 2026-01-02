@@ -1,0 +1,30 @@
+{
+    "name": "project-template",
+    "version": "1.0.0",
+    "description": "Capstone Project Template ",
+    "repository": {
+        "type": "git",
+        "url": "https://autocode.git.epam.com/campus_javascript/capstone-project/project-template.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "build": "sass src/scss:dist",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "sass --watch src/scss:dist",
+        "lint:js": "eslint . --ext .js",
+        "lint:scss": "stylelint \"**/*.scss\"",
+        "lint": "npm run lint:js && npm run lint:scss"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.36.0",
+        "eslint": "^9.36.0",
+        "globals": "^16.4.0",
+        "sass": "^1.92.1",
+        "stylelint": "^16.24.0",
+        "stylelint-config-standard-scss": "^16.0.0",
+        "stylelint-scss": "^6.12.1"
+    }
+}

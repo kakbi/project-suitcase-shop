@@ -1,0 +1,175 @@
+<header class="header">
+    <div class="header__container container">
+        <button
+            class="menu__icon"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            <span></span>
+        </button>
+
+        <div class="header-content menu__body" id="main-menu">
+            <div class="header__top">
+                <div class="header__socials">
+                    <a
+                        href="https://facebook.com"
+                        class="header__social"
+                        aria-label="Facebook"
+                        ><span class="icon-facebook">
+                            <img
+                                src="/src/assets/img/icons/facebook.svg"
+                                alt=""
+                                aria-hidden="true" /></span
+                    ></a>
+                    <a
+                        href="https://x.com/"
+                        class="header__social"
+                        aria-label="Twitter"
+                        ><span class="icon-twitter">
+                            <img
+                                src="/src/assets/img/icons/twitter.svg"
+                                alt=""
+                                aria-hidden="true" /></span
+                    ></a>
+                    <a
+                        href="https://instagram.com/"
+                        class="header__social"
+                        aria-label="Instagram"
+                        ><span class="icon-instagram">
+                            <img
+                                src="/src/assets/img/icons/instagram.svg"
+                                alt=""
+                                aria-hidden="true" /></span
+                    ></a>
+                </div>
+
+                <div class="header__logo">
+                    <a href="./index.html"
+                        ><span class="icon-logo">
+                            <img
+                                src="/src/assets/img/icons/logo.svg"
+                                alt="Company logo"
+                            /> </span
+                    ></a>
+                </div>
+
+                <div class="header__actions">
+                    <button class="header__action" aria-label="User account">
+                        <span class="icon-user">
+                            <img
+                                src="/src/assets/img/icons/user.svg"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                        </span>
+                    </button>
+
+                    <a href="/src/pages/cart.html" class="header__action">
+                        <span class="icon-cart">
+                            <img
+                                src="/src/assets/img/icons/shopping-cart.svg"
+                                alt="shopping cart"
+                            />
+                            <span class="header-cart-counter"></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a
+                                href="/src/index.html"
+                                class="nav__link nav__link--active"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="/src/pages/catalog.html" class="nav__link"
+                                >Catalog
+                                <img
+                                    src="/src/assets/img/icons/arrow.svg"
+                                    alt="Expand catalog submenu"
+                                    class="nav__icon"
+                                />
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/src/pages/about.html" class="nav__link"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="/src/pages/contact.html" class="nav__link"
+                                >Contact Us</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div
+            class="modal__content"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+            <button class="modal__close" id="modalClose"></button>
+            <div class="modal__body">
+                <h2 id="modalTitle" class="visually-hidden">Login</h2>
+                <form id="modalForm" class="modal__form">
+                    <label for="modal-email" class="modal__label"
+                        >Email address <span class="required">*</span></label
+                    >
+                    <input
+                        type="email"
+                        id="modal-email"
+                        class="modal__input"
+                        required
+                        pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                    />
+
+                    <label for="modal-password" class="modal__label"
+                        >Password <span class="required">*</span></label
+                    >
+                    <div class="modal__password-wrapper">
+                        <input
+                            type="password"
+                            id="modal-password"
+                            class="modal__input"
+                            required
+                        />
+                        <img
+                            src="/src/assets/img/icons/eye.svg"
+                            class="modal__eye-icon"
+                            alt=""
+                            aria-hidden="true"
+                        />
+                    </div>
+
+                    <div class="modal__checkbox">
+                        <div class="modal__checkbox__wrapper">
+                            <input type="checkbox" id="modal-checkbox" />
+                            <label
+                                for="modal-checkbox"
+                                class="modal__checkbox-label"
+                                >Remember me</label
+                            >
+                        </div>
+                        <a href="javascript:void(0)" class="modal__link"
+                            >Forgot Your Password?</a
+                        >
+                    </div>
+
+                    <button type="submit" class="button modal__btn">
+                        LOG IN
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

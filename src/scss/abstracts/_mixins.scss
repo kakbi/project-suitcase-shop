@@ -1,0 +1,46 @@
+@use './variables.scss' as *;
+@use 'sass:color';
+
+@mixin button(
+    $bg,
+    $color: $color-white,
+    $font-size: 18px,
+    $font-weight: $font-weight-bold
+) {
+    display: inline-block;
+    background-color: $bg;
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-decoration: none;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: color.adjust($bg, $lightness: -10%);
+    }
+}
+
+@mixin pagination-button(
+    $bg: $color-white,
+    $border: 2px solid $color-button,
+    $radius: $border-radius-sm,
+    $padding: 14px 20px,
+    $font-size: 11px,
+    $font-weight: $font-weight-bold,
+    $hover-bg: #e576b5
+) {
+    background-color: $bg;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $hover-bg;
+    }
+}

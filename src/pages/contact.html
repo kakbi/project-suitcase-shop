@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../dist/main.css" />
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section class="contact">
+                <img
+                    src="../assets/img/contact-background.jpg"
+                    alt="contact background"
+                    class="contact__image"
+                />
+                <div class="contact__overlay">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Contact Us</h2>
+                        <p class="contact__text">
+                            Duis vestibulum elit vel neque pharetra
+                            vulputate.<br />
+                            Duis rutrum non risus in imperdiet.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-info">
+                <div class="contact-info__container container">
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <img
+                                src="../assets/img/icons/contact-location.svg"
+                                alt="Location icon"
+                            />
+                        </div>
+                        <h3 class="contact-info__title">Our Location</h3>
+                        <div class="contact-info__text">
+                            <address>
+                                <span> 1234 NW Bobcat Lane, St. </span> <br />
+                                <span>Robert, MO 65584-5678</span>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <img
+                                src="../assets/img/icons/contact-time.svg"
+                                alt="Working hours icon"
+                            />
+                        </div>
+                        <h3 class="contact-info__title">Operating Time</h3>
+                        <div class="contact-info__text">
+                            <time datetime="09:00-18:00">
+                                Monday - Friday: 9am - 6 pm
+                            </time>
+                            <br />
+                            <time datetime="10:30-18:00"
+                                >Weekends: 10:30 am - 6pm</time
+                            >
+                        </div>
+                    </div>
+
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <img
+                                src="../assets/img/icons/contact-email.svg"
+                                alt="Superior Accuracy"
+                            />
+                        </div>
+                        <h3 class="contact-info__title">Our Email</h3>
+                        <div class="contact-info__text">
+                            <a href="mailto:best@shop.com"> best@shop.com</a>
+                            <br />
+                            <a href="mailto:info@bestshop.com"
+                                >info@bestshop.com</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">
+                            <img
+                                src="../assets/img/icons/contact-phone.svg"
+                                alt="Superior Accuracy"
+                            />
+                        </div>
+                        <h3 class="contact-info__title">Call us</h3>
+                        <div class="contact-info__text">
+                            <a href="tel:+12681428413">(268)142-8413</a>
+                            <br />
+                            <a href="tel:+17602652917">(760)265-2917</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback">
+                <div class="feedback__container container">
+                    <div class="feedback__image">
+                        <img
+                            src="../assets/img/feedback-image.jpg"
+                            alt="accessories"
+                        />
+                    </div>
+                    <form class="feedback__form">
+                        <h2 class="feedback__title">
+                            Your Feedback Is Much Appreciated!
+                        </h2>
+                        <p class="feedback__description">
+                            We will contact you when you complete the following
+                            form!
+                        </p>
+
+                        <label for="name" class="feedback__label"
+                            >Your Name <span>*</span></label
+                        >
+                        <input
+                            type="text"
+                            id="name"
+                            class="feedback__input"
+                            required
+                        />
+
+                        <label for="email" class="feedback__label"
+                            >Your Email Address <span>*</span></label
+                        >
+                        <input
+                            type="email"
+                            id="email"
+                            class="feedback__input"
+                            required
+                        />
+
+                        <label for="topic" class="feedback__label"
+                            >Topic <span>*</span></label
+                        >
+                        <input
+                            type="text"
+                            id="topic"
+                            class="feedback__input"
+                            required
+                        />
+
+                        <label for="message" class="feedback__label"
+                            >Your Message <span>*</span></label
+                        >
+                        <textarea
+                            id="message"
+                            class="feedback__textarea"
+                            required
+                        ></textarea>
+
+                        <button type="submit" class="button feedback__btn">
+                            SEND
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="../js/main.js" type="module"></script>
+</html>

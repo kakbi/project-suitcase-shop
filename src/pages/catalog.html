@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../dist/main.css" />
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section class="cotalog-products cotalog-products__container">
+                <div class="cotalog-products__content">
+                    <div class="cotalog-products__controls-wrapper">
+                        <div class="cotalog-products__controls">
+                            <p class="cotalog-products__results"></p>
+
+                            <select
+                                class="cotalog-products__sorting"
+                                id="sort-select"
+                            >
+                                <option value="default">Default Sorting</option>
+                                <option value="price-asc">
+                                    Price: Low to High
+                                </option>
+                                <option value="price-desc">
+                                    Price: High to Low
+                                </option>
+                                <option value="popularity">Popularity</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+
+                        <!-- Фильтры -->
+                        <div class="cotalog-products__filters">
+                            <div class="cotalog-products__filters-size">
+                                <label
+                                    class="cotalog-products__filter-label--size"
+                                    for="filter-size"
+                                    >Size</label
+                                >
+                                <select
+                                    class="cotalog-products__filter"
+                                    id="filter-size"
+                                >
+                                    <option value="">Choose option</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="S-L">S-L</option>
+                                    <option value="S, M, XL">S, M, XL</option>
+                                </select>
+                            </div>
+
+                            <div class="cotalog-products__filters-color">
+                                <label
+                                    class="cotalog-products__filter-label--color"
+                                    for="filter-color"
+                                    >Color</label
+                                >
+                                <select
+                                    class="cotalog-products__filter"
+                                    id="filter-color"
+                                >
+                                    <option value="">Choose option</option>
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                    <option value="black">Black</option>
+                                    <option value="grey">Grey</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="pink">Pink</option>
+                                </select>
+                            </div>
+
+                            <div class="cotalog-products__filters-category">
+                                <label
+                                    class="cotalog-products__filter-label--category"
+                                    for="filter-category"
+                                    >Category</label
+                                >
+                                <select
+                                    class="cotalog-products__filter"
+                                    id="filter-category"
+                                >
+                                    <option value="">Choose option</option>
+                                    <option value="carry-ons">Carry-ons</option>
+                                    <option value="suitcases">Suitcases</option>
+                                    <option value="luggage sets">
+                                        Luggage Sets
+                                    </option>
+                                    <option value="kids' luggage">
+                                        Kids' Luggage
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="cotalog-products__sale-filter">
+                                <label class="sale-status" for="sale-all"
+                                    >Sales</label
+                                >
+                                <input
+                                    type="checkbox"
+                                    id="sale-all"
+                                    name="sale-filter"
+                                    value="all"
+                                    checked
+                                />
+                            </div>
+                        </div>
+                        <div class="cotalog-products__filter-btns">
+                            <button
+                                class="button cotalog-products__filter-btn"
+                                id="reset-filters"
+                            >
+                                CLEAR FILTERS
+                            </button>
+                            <button
+                                class="button cotalog-products__filter-btn"
+                                id="hide-filters"
+                            >
+                                HIDE FILTERS
+                            </button>
+                        </div>
+
+                        <div
+                            class="cotalog-products__grid"
+                            id="products-grid"
+                        ></div>
+
+                        <div class="pagination hidden">
+                            <button
+                                class="pagination__button pagination__button--prev"
+                                id="prevPage"
+                            >
+                                <span
+                                    class="pagination__button-icon icon-prev"
+                                ></span>
+                                PREVIOUS
+                            </button>
+
+                            <ul
+                                class="pagination__list"
+                                id="paginationList"
+                            ></ul>
+
+                            <button
+                                class="pagination__button pagination__button--next"
+                                id="nextPage"
+                            >
+                                NEXT
+                                <span
+                                    class="pagination__button-icon icon-next"
+                                ></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <aside class="cotalog-products__sidebar">
+                        <div class="cotalog-products__search">
+                            <input type="text" placeholder="Search Models" />
+                        </div>
+                        <h3 class="cotalog-products__sidebar-title">
+                            Top Best Sets
+                        </h3>
+                        <div
+                            class="cotalog-products__list"
+                            id="cotalog-products__list"
+                        ></div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="../js/main.js" type="module"></script>
+</html>
